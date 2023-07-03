@@ -24,6 +24,16 @@ pipeline {
                 }
             }
         }
+          stage('run the container'){
+           steps{
+                script{
+                    sh '''
+                    echo 'starting the  container'
+                    docker run -d -p 8000:8000 madan09/django_todo:${BUILD_NUMBER}
+                    '''
+                }
+            }
+        }
 
         stage('Push the artifacts'){
            steps{
@@ -35,6 +45,5 @@ pipeline {
                 }
             }
         }
-        
-    }
-}
+     }
+  }
