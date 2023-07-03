@@ -34,16 +34,5 @@ pipeline {
                 }
             }
         }
-
-        stage('Push the artifacts'){
-           steps{
-                script{
-                    sh '''
-                    echo 'Push to Repo'
-                    docker push madan09/django_todo:${BUILD_NUMBER}
-                    '''
-                }
-            }
-        }
-     }
-  }
+      }
+   }
