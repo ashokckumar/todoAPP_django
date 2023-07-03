@@ -19,7 +19,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t madan09/django_todo:${BUILD_NUMBER} .
+                    sudo docker build -t madan09/django_todo:${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'starting the  container'
-                    docker run -d -p 8000:8000 madan09/django_todo:${BUILD_NUMBER}
+                    sudo docker run -d -p 8000:8000 madan09/django_todo:${BUILD_NUMBER}
                     '''
                 }
             }
