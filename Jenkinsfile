@@ -29,7 +29,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'starting the  container'
-                    sudo docker run -d -p 8000:8000 --name==TODOAPP madan09/django_todo:$IMAGE_TAG
+                    sudo docker run -d -p 8000:8000 --name==todoapp madan09/django_todo:$IMAGE_TAG
                     '''
                 }
             }
