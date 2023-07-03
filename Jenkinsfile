@@ -38,7 +38,7 @@ pipeline {
            steps{
                 script{
                     sh '''
-                    echo 'Push to Repo'
+                    echo 'Push to docker hub'
                     docker push madan09/django_todo:${BUILD_NUMBER}
                     '''
                 }
