@@ -34,7 +34,7 @@ pipeline {
                 }
             }
         }
-        tage('Push the artifacts'){
+         stage('Push the artifacts'){
            steps{
                 script{
                     sh '''
