@@ -39,10 +39,10 @@ pipeline {
                 script{
                     withCredentials([string(credentialsId: 'dockerhub1', variable: 'dockerhub')]) {
                     sh 'docker login -u madan09 -p ${dockerhub}'
-}
+                    }
                     sh '''
                     echo 'Push to docker hub'
-                    docker push madan09/django_todo:${BUILD_NUMBER}
+                    docker push madan09/django_todo:$IMAGE_TAG
                     '''
                 }
             }
