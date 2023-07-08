@@ -10,7 +10,7 @@ pipeline {
         
         stage('Checkout'){
            steps {
-                git 'https://github.com/MadanRaj09/todoAPP_django.git'
+                //git 'https://github.com/MadanRaj09/todoAPP_django.git'
            }
         }
 
