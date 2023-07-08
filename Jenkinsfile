@@ -19,7 +19,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t madan09/django_todo:$IMAGE_TAG .
+                    docker build -t madan09/python_django_todo:$IMAGE_TAG .
                     '''
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'starting the  container'
-                    sudo docker run -d -p 8000:8000 --name todoapp madan09/django_todo:$IMAGE_TAG
+                     docker run -d -p 8000:8000 --name todoapp madan09/python_django_todo:$IMAGE_TAG
                     '''
                 }
             }
@@ -41,8 +41,8 @@ pipeline {
                     sh 'docker login -u madan09 -p ${dockerhub}'
                     }
                     sh '''
-                    echo 'Push to docker hub'
-                    docker push madan09/django_todo:$IMAGE_TAG
+                    //echo 'Push to docker hub'
+                   // docker push madan09/django_todo:$IMAGE_TAG
                     '''
                 }
             }
