@@ -10,8 +10,9 @@ pipeline {
         
         stage('Checkout'){
            steps {
+               echo ' passed '
                 //git 'https://github.com/MadanRaj09/todoAPP_django.git'
-           }
+              }
         }
 
         stage('Build Docker'){
