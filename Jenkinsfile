@@ -19,7 +19,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    sudo docker build -t madan09/django_todo:$IMAGE_TAG .
+                    docker build -t madan09/django_todo:$IMAGE_TAG .
                     '''
                 }
             }
