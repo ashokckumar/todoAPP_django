@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: madanrajtodoappdjango 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: madanrajtodoappdjango
+  template:
+    metadata:
+      labels:
+        app: madanrajtodoappdjango 
+    spec:
+      containers:
+        - name: madanrajtodoappdjango 
+          image: todoreg.azurecr.io/madanrajtodoappdjango
+          ports:
+          - containerPort: 8000
