@@ -39,10 +39,14 @@ stages:
           $(tag)
           latest
     
-    - task: CopyFiles@2
+   
+    - task: KubernetesManifest@1
       inputs:
-        SourceFolder: 'deploy'
-        Contents: '*.yaml'
-        TargetFolder: 'manifest'
-      
+        action: 'deploy'
+        connectionType: 'azureResourceManager'
+        azureSubscriptionConnection: 'azureconnection'
+        azureResourceGroup: 'todo'
+        kubernetesCluster: 'demo'
+        useClusterAdmin: true
+        manifests: 'deploy/'
     
