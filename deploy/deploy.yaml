@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: todo
-        image: todoreg.azurecr.io/todoappdjango:19
+        image: todoreg.azurecr.io/todoappdjango:latest
         ports:
         - containerPort: 8000
