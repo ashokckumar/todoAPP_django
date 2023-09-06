@@ -74,7 +74,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/deploy.yml
+                $(Pipeline.Workspace)/manifests/deploy.yaml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
