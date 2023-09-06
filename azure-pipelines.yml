@@ -38,3 +38,11 @@ stages:
         tags: |
           $(tag)
           latest
+    
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: 'deploy'
+        Contents: '*.yaml'
+        TargetFolder: 'manifest'
+      
+    
